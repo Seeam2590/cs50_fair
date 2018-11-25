@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="../../../../favicon.ico">
 
   <title>CS50 Digital Fair</title>
 
@@ -29,7 +28,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           {% if user.is_authenticated %}
-          <a class="nav-item nav-link"  href="{% url 'create' %}"><span class="oi oi-plus"></span></a>
+          <a class="nav-item nav-link"  href="{% url 'create' %}">Submit your project</a>
           <a class="nav-item nav-link"  href="{% url 'write' %}">Share your CS50 experience</a>
           <a class="nav-item nav-link"  href="{% url 'allideas' %}">CS50 Final Projects</a>
           <a class="nav-item nav-link"  href="{% url 'allblogs' %}">CS50 Blogs</a>
