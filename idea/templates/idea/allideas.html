@@ -2,7 +2,10 @@
 {% block content %}
 <br/>
 <br/>
-
+<h3 style="text-align:center; color:#edde0b">
+  PROJECT LEADERBOARD [by likes]
+</h3>
+<hr/>
 
 {% for idea in Ideas.all %}
 <div class = 'row' onclick="window.location='{% url 'detail' idea.id %}';" style="cursor: pointer;">

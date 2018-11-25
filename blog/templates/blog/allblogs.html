@@ -3,29 +3,33 @@
 {% block content %}
 
 <main role='main'>
-      <div class ='container'>
-        <h1 class='text-center pt-3'>Welcome to CS50 Blogs</h1>
+  <div class ='container'>
+      <h1 class='text-center pt-3'>Welcome to CS50 Blogs</h1>
       </br>
-    </br>
-    <h3 style="color:#1caedb"><em> Read the experiences of students taking CS50 </em></h3>
-    <hr/>
-  </br>
+      </br>
+      <h3 style="color:#1caedb"><em> Read the experiences of students taking CS50 </em></h3>
+      <form>
+        <input type='text' name='q' placeholder="Search Blogs by keyword"/>
+        <input type='submit' value='Search'>
+        <hr/>
+        <h5>Searching by keyword:<h4 style="color:#1caedb"> {{query}}</h4></h5>
+      </form>
+      <hr/>
+      </br>
   {% for blog in blog.all %}
 
-  <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-      <div class="col-md-6 px-0">
-            <h1 class="display-4 font-italic">{{blog.title}}</h1>
-            <p class="lead my-3">{{blog.summary}} .........</p>
-            <div class="mb-1 text-muted">{{blog.pub_date_pretty}} by {{ blog.author }}</div>
-            <p class="lead mb-0"><a href="{% url 'experience' blog.id %}" target='_blank' class="text-blue">Continue reading</a></p>
+    <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+              <h1 class="display-4 font-italic">{{blog.title}}</h1>
+              <p class="lead my-3">{{blog.summary}} .........</p>
+              <div class="mb-1 text-muted">{{blog.pub_date_pretty}} by {{ blog.author }}</div>
+              <p class="lead mb-0"><a href="{% url 'experience' blog.id %}" target='_blank' class="text-blue">Continue reading</a></p>
         </div>
+    </div>
 
-
+  {% endfor %}
   </div>
-
-      {% endfor %}
-  </div>
-  </main>
+</main>
 
 
 {% endblock %}

@@ -6,7 +6,7 @@ from django.utils import timezone
 # Create your views here.
 @login_required(login_url='/account/signup')
 def allideas(request):
-    Ideas = idea.objects
+    Ideas = idea.objects.order_by('-votes_total')
     return render(request, 'idea/allideas.html', {'Ideas':Ideas})
 
 @login_required(login_url='/account/signup')

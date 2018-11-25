@@ -5,9 +5,12 @@ from django.utils import timezone
 
 # Create your views here.
 def allblogs(request):
-
+    query = request.GET.get("q")
     Blog = blog.objects
-    return render(request, 'blog/allblogs.html', {'blog':Blog})
+    if query:
+        Blog = blog.objects.filter(body__icontains=query)
+    return render(request, 'blog/allblogs.html', {'blog':Blog,'query':query})
+
 def experience(request, blog_id):
     experience = get_object_or_404(blog, pk=blog_id)
     return render(request, 'blog/experience.html', {'blog':experience})
