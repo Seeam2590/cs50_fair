@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+</br>
+{% if error %}
+</br>
+</hr>
+{{ error }}
+<hr/>
+<br/>
+<br/>
+
+{% endif %}
+
+<div class='container text-center'>
+<h1> Signup for free and get access to the CS50 Digital Fair </h1>
+
+<form method='POST' action= "{% url 'signup' %}">
+  {% csrf_token %}
+  Username:
+<br/>
+ <input type='text' name='username'/>
+<br/>
+  Passord:
+  <br/>
+   <input type='password' name='password1'/>
+  <br/>
+  Confirm Password:
+  <br/>
+   <input type='password' name='password2'/>
+  <br/>
+  <br/>
+  <input  class='btn btn-primary' type='submit' value='Signup'/>
+</form>
+</div>
+</br>
+{% endblock %}

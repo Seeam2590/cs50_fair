@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+</br>
+{% if error %}
+</br>
+</hr>
+{{ error }}
+<hr/>
+<br/>
+<br/>
+
+{% endif %}
+
+<h1> Share your CS50 Experience </h1>
+
+<form method='POST' action= "{% url 'write' %}" enctype="multipart/form-data">
+  {% csrf_token %}
+  Author:
+  <br/>
+  <input type='text' name='author'/>
+  <br/>
+  Title:
+  <br/>
+  <input type='text' name='title'/>
+  <br/>
+  <div class="form-group">
+      <label for="exampleFormControlTextarea1">Content</label>
+      <textarea class="form-control" name='body' rows="10"></textarea>
+  </div>
+  A relevant picture:
+  <br/>
+ <input type='file' name='image'/>
+  <br/>
+  <br/>
+  <input  class='btn btn-primary' type='submit' value='Submit the Blog'/>
+</form>
+
+{% endblock %}

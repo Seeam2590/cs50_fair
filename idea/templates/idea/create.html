@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+</br>
+{% if error %}
+</br>
+</hr>
+{{ error }}
+<hr/>
+<br/>
+<br/>
+
+{% endif %}
+
+<h1> Share your CS50 Project </h1>
+
+<form method='POST' action= "{% url 'create' %}" enctype="multipart/form-data">
+  {% csrf_token %}
+  Project Title:
+  <br/>
+  <input type='text' name='title'/>
+  <br/>
+  <div class="form-group">
+      <label for="exampleFormControlTextarea1">Project Description</label>
+      <textarea class="form-control" name='body' rows="5"></textarea>
+  </div>
+  Link to your project:
+  <br/>
+   <input type='text' name='url'/>
+  <br/>
+  <br/>
+  Project Icon:
+  <br/>
+ <input type='file' name='icon'/>
+  <br/>
+  <br/>
+  An image of the project:
+  <br/>
+ <input type='file' name='image'/>
+  <br/>
+  <br/>
+  <input  class='btn btn-primary' type='submit' value='Submit the project'/>
+</form>
+
+{% endblock %}

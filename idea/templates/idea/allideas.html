@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<br/>
+<br/>
+
+
+{% for idea in Ideas.all %}
+<div class = 'row' onclick="window.location='{% url 'detail' idea.id %}';" style="cursor: pointer;">
+  <div class='col-2'>
+        <img src='{{ idea.icon.url }}' class = 'img-fluid'/>
+</div>
+<div class='col-7'>
+  <h1>{{ idea.title }}</h1>
+  <p> Project Description: {{ idea.summary }}</p>
+</div>
+<div class='col-3'>
+  <a href= "javascript:{document.getElementById('upvote{{idea.id}}').submit()}"><button class='btn btn-primary btn-lg btn-block'><span class="oi oi-thumb-up"></span> I like this project! [{{ idea.votes_total}}]</button></a>
+</div>
+</div>
+
+<br/>
+<hr/>
+
+<form id="upvote{{idea.id}}" method="POST" action="{% url 'upvote' idea.id %}" >
+  {% csrf_token %}
+  <input type="hidden">
+</form>
+
+{% endfor %}
+
+{% endblock %}

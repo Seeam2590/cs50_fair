@@ -25,12 +25,16 @@ SECRET_KEY = '9xpnwjbcs^o_$6()1m#&k1^kojwe96_p^^l%j2+)7k3sy$xe0u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cs50s90.herokuapp.com']
+ALLOWED_HOSTS = ['cs50s90.herokuapp.com','localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'idea.apps.IdeaConfig',
+    'blog.apps.BlogConfig',
+    'account.apps.AccountConfig',
+    'people.apps.PeopleConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +58,7 @@ ROOT_URLCONF = 'cs50s90.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['cs50s90/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,7 +126,9 @@ DATABASES['default'].update(db_from_env)
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "cs50s90/static"),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

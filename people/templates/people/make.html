@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+</br>
+{% if error %}
+</br>
+</hr>
+{{ error }}
+<hr/>
+<br/>
+<br/>
+
+{% endif %}
+
+<h1> Make your own CS50 Student Card </h1>
+
+<form method='POST' action= "{% url 'make' %}" enctype="multipart/form-data">
+  {% csrf_token %}
+  Name:
+  <br/>
+  <input type='text' name='name'/>
+  <br/>
+  House, Year  (example: Eliot, 2021)
+  <br/>
+  <input type='text' name='house_class'/>
+  <br/>
+  <div class="form-group">
+      <label for="exampleFormControlTextarea1">About you</label>
+      <textarea class="form-control" name='about' rows="5"></textarea>
+  </div>
+  Your Picture:
+  <br/>
+ <input type='file' name='image'/>
+  <br/>
+  <br/>
+  <input  class='btn btn-primary' type='submit' value='Finish CS50 Student Card'/>
+</form>
+
+{% endblock %}
