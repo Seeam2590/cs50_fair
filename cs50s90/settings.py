@@ -23,8 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9xpnwjbcs^o_$6()1m#&k1^kojwe96_p^^l%j2+)7k3sy$xe0u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# Debug is turned to False since we are deploying this
-DEBUG = False
+DEBUG = True
 
 # This ensures that localhost and heroku can host this web application
 ALLOWED_HOSTS = ['cs50s90.herokuapp.com','localhost']
@@ -127,7 +126,7 @@ USE_TZ = True
 
 # This ensures the correct database is used when deployed by Heroku
 import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
+db_from_env = dj_database_url.config(conn_max_age=0)
 DATABASES['default'].update(db_from_env)
 
 STATIC_URL = '/static/'
