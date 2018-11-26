@@ -23,14 +23,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9xpnwjbcs^o_$6()1m#&k1^kojwe96_p^^l%j2+)7k3sy$xe0u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Debug is turned to False since we are deploying this
+DEBUG = False
 
+# This ensures that localhost and heroku can host this web application
 ALLOWED_HOSTS = ['cs50s90.herokuapp.com','localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+# Our apps have to be installed here as well
     'idea.apps.IdeaConfig',
     'blog.apps.BlogConfig',
     'account.apps.AccountConfig',
@@ -76,6 +79,7 @@ WSGI_APPLICATION = 'cs50s90.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+# Django uses SQLite database by default while Heroku uses Postgresql
 
 DATABASES = {
     'default': {
@@ -120,15 +124,20 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
+
+# This ensures the correct database is used when deployed by Heroku
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 STATIC_URL = '/static/'
+# Makes sure the static files are stored in appropriate places
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "cs50s90/static"),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+# Makes sure the media files are stored in appropriate places
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

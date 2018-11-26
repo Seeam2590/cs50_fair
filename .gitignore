@@ -1,0 +1,9 @@
+### A gitignore file for Django that ensures certain files can't be seen by the
+public even when repository is public ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media

@@ -5,31 +5,30 @@
 
 </br>
 {% if error %}
-</br>
-</hr>
-{{ error }}
-<hr/>
-<br/>
-<br/>
-
+  </br>
+  </hr>
+  {{ error }}
+  <hr/>
+  <br/>
+  <br/>
 {% endif %}
 
-
+<!-- Login form -->
 <div class='container text-center'>
-<h1> Login and enjoy the CS50 Digital Fair </h1>
-<form method='POST' action= "{% url 'login' %}">
-  {% csrf_token %}
-  Username:
-<br/>
- <input type='text' name='username'/>
-<br/>
-  Password:
-  <br/>
-   <input type='password' name='password'/>
-  </br>
-</br>
-  <input  class='btn btn-primary' type='submit' value='Login'/>
-</form>
+  <h1> Login and enjoy the CS50 Digital Fair </h1>
+  <form method='POST' action= "{% url 'login' %}">
+      {% csrf_token %}
+      Username:
+    <br/>
+     <input type='text' name='username'/>
+    <br/>
+      Password:
+    <br/>
+     <input type='password' name='password'/>
+    </br>
+    </br>
+    <input  class='btn btn-primary' type='submit' value='Login'/>
+  </form>
 </div>
 </br>
 </hr>

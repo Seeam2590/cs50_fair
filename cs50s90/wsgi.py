@@ -15,5 +15,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cs50s90.settings')
 
 application = get_wsgi_application()
 
+# Code to help deploy with Heroku
 from whitenoise.django import DjangoWhiteNoise
 application = DjangoWhiteNoise(application)

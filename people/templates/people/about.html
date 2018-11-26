@@ -1,30 +1,27 @@
 {% extends 'base.html' %}
+
 {% block content %}
 
-
-  <main role="main" class="container text-center py-5">
-        <div class="row">
-          <div class="col-md-12 blog-main">
-            <h3 class="pb-3 mb-4 font-italic border-bottom">
-              Students of CS50
-            </h3>
-
-            <div class="blog-post">
-              <h2 style="color:#891135" class="blog-post-title">Meet {{ people.name }}</h2>
-              <br/>
-              <br/>
-
-              <img class="img-fluid" src="{{ people.image.url}}" height=450 width=600/>
-
-              <br/>
-              <br/>
-              <hr/>
-
-              <p>{{ people.about}}</p>
-            </div>
-          </div>
-        </div>
-      </main>
+<!-- Individual about page for every student -->
+<main role="main" class="container text-center py-5">
+  <div class="row">
+    <div class="col-md-12 blog-main">
+      <h3 class="pb-3 mb-4 font-italic border-bottom">
+        Students of CS50
+      </h3>
+      <div class="blog-post">
+        <h2 style="color:#891135" class="blog-post-title">Meet {{ people.name }}</h2>
+        <br/>
+        <br/>
+        <img class="img-fluid" src="{{ people.image.url}}" height=450 width=600/>
+        <br/>
+        <br/>
+        <hr/>
+        <p>{{ people.about}}</p>
+      </div>
+    </div>
+  </div>
+</main>
 
 
 {% endblock %}

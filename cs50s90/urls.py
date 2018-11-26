@@ -19,6 +19,7 @@ from people import views
 from django.conf.urls.static import static
 from django.conf import settings
 
+# Code to control url requests
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('people.urls')),
