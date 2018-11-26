@@ -20,6 +20,7 @@ h. View the leaderboard of projects based on 'likes'
 Framework used: Django (Python Framework) has been used to build this web application
 
 Live Project: The deployed web application can be found here - https://cs50s90.herokuapp.com/
+Project Description: The video description of the project can be found at: https://youtu.be/A8BNNN7_WlU
 
 Implementation:
 
