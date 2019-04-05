@@ -7,4 +7,5 @@ __pycache__/
 local_settings.py
 db.sqlite3
 media
-cs50s90/settings.py
+*settings.py
+Procfile
