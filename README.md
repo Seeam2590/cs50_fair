@@ -1,15 +1,15 @@
-#Project Title:
+# Project Title:
 CS50 Digital Fair
 Submitted by: Seeam Shahid Noor
 Contact: seeamnoor@college.harvard.edu
 Course: CS50 at Harvard
 User Manual
 
-#Project Description:
+# Project Description:
 A web application that is an online version of the CS50 Fair. The website allows everyone to signup to get an account. After logging
 in, users can:
 
-#Features of the web-application:
+# Features of the web-application:
 a. Write a blog on their CS50 experience
 b. View all the blogs written by other CS50 students
 c. Search for a blog by using specific keywords
@@ -21,12 +21,12 @@ h. View the leaderboard of projects based on 'likes'
 
 Framework used: Django (Python Framework) has been used to build this web application
 
-#Live Project:
+# Live Project:
 The deployed web application can be found here - https://cs50s90.herokuapp.com/
-#Project Description:
+# Project Description:
 The video description of the project can be found at: https://youtu.be/A8BNNN7_WlU
 
-Implementation:
+# Implementation:
 
 The whole web application can be used using the command terminal.
 
