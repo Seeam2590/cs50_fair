@@ -30,7 +30,7 @@ The video description of the project can be found at: https://youtu.be/A8BNNN7_W
 
 The whole web application can be used using the command terminal.
 
-In order to get started:
+# In order to get started:
 a. Install python into your computer - https://realpython.com/installing-python/
 b. Install pip - https://www.makeuseof.com/tag/install-pip-for-python/
 c. Install virtualenv - https://docs.python-guide.org/dev/virtualenvs/
@@ -39,7 +39,7 @@ other programs your computer might run in the future, it is more efficient to in
 d. Make sure you have pip, virtualenv and python in the Path environment variable in your computer - https://superuser.com/questions/143119/how-do-i-add-python-to-the-windows-path
 These instructions show only how add python to path, others can be done in similar ways
 
-Downloading:
+# Downloading:
 a. Download the project directory to your computer
 b. Open up your command terminal
 c. Activate your virtual environment
@@ -47,7 +47,7 @@ d. Move to where the project directory is so that you are in the directory where
 e. Run the command (for Windows):   pip install -r requirements.txt
 This ensures that all the packages required to run the web application locally in your server is installed inside a virtual environment
 
-Setting up and running (while still being in the command terminal):
+# Setting up and running (while still being in the command terminal):
 a. Create a Superuser, which you will need to have admin login to your web application:   python manage.py createsuperuser
 When prompted, insert the username, email and password you want to use to login as admin.
 b. Run these two commands next to ensure that your Django database has every required models to run the web application:
