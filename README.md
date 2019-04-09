@@ -60,4 +60,5 @@ d. In your browser to start the website, type in:     localhost:8000
 e. The web application is ready to be used! In order to delete entries, access the admin panel be using superuser credentials at:
 localhost:8000/admin
 
+Chech DESIGN.md for technical details for the project.  
 I sincerely hope you enjoy using the web application. Thank you for reading this!
