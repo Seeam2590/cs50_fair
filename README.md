@@ -34,8 +34,8 @@ The whole web application can be used using the command terminal.
 
 # In order to get started:
 
-a. Install python into your computer - https://realpython.com/installing-python/
-b. Install pip - https://www.makeuseof.com/tag/install-pip-for-python/
+a. Install python into your computer - https://realpython.com/installing-python/ 
+b. Install pip - https://www.makeuseof.com/tag/install-pip-for-python/ 
 c. Install virtualenv - https://docs.python-guide.org/dev/virtualenvs/
 
 You will be requiring a few packages to run this web application on your local server. To make sure the packages doesn't cause problems with other programs your computer might run in the future, it is more efficient to install those packages while being inside virtualenv.
