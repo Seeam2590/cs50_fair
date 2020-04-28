@@ -51,7 +51,10 @@ a. Download the project directory to your computer
 b. Open up your command terminal  
 c. Activate your virtual environment  
 d. Move to where the project directory is so that you are in the directory where the file 'requirements.txt' is
-e. Run the command (for Windows):   pip install -r requirements.txt  
+e. Run the command (for Windows):
+
+>> pip install -r requirements.txt  
+
 This ensures that all the packages required to run the web application locally in your server is installed inside a virtual environment
 
 # Setting up and running (while still being in the command terminal):
@@ -59,12 +62,17 @@ This ensures that all the packages required to run the web application locally i
 a. Create a Superuser, which you will need to have admin login to your web application:   python manage.py createsuperuser
 When prompted, insert the username, email and password you want to use to login as admin.  
 b. Run these two commands next to ensure that your Django database has every required models to run the web application:
-python manage.py makemigrations
-python.manage.py migrate  
+
+>> python manage.py makemigrations
+>> python.manage.py migrate  
+
 c. Finally, run the command:  python manage.py runserver  
-Don't close the command terminal since the web application can only be accessed when the local server is running. Press 'ctrl + c' to quit the
-server anytime.  
-d. In your browser to start the website, type in:     localhost:8000  
+Don't close the command terminal since the web application can only be accessed when the local server is running. Press 'ctrl + c' to quit the server anytime.  
+
+d. In your browser to start the website, type in:
+
+>> localhost:8000  
+
 e. The web application is ready to be used! In order to delete entries, access the admin panel be using superuser credentials at:
 localhost:8000/admin
 
