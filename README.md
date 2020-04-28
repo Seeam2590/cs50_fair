@@ -38,9 +38,10 @@ a. Install python into your computer - https://realpython.com/installing-python/
 b. Install pip - https://www.makeuseof.com/tag/install-pip-for-python/
 c. Install virtualenv - https://docs.python-guide.org/dev/virtualenvs/
 
-You will be requiring a few packages to run this web application on your local server. To make sure the packages doesn't cause problems with
-other programs your computer might run in the future, it is more efficient to install those packages while being inside virtualenv
+You will be requiring a few packages to run this web application on your local server. To make sure the packages doesn't cause problems with other programs your computer might run in the future, it is more efficient to install those packages while being inside virtualenv.
+
 d. Make sure you have pip, virtualenv and python in the Path environment variable in your computer - https://superuser.com/questions/143119/how-do-i-add-python-to-the-windows-path
+
 These instructions show only how add python to path, others can be done in similar ways
 
 # Downloading:
