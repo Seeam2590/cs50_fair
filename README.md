@@ -10,6 +10,7 @@ A web application that is an online version of the CS50 Fair. The website allows
 in, users can:
 
 # Features of the web-application:
+
 a. Write a blog on their CS50 experience  
 b. View all the blogs written by other CS50 students  
 c. Search for a blog by using specific keywords  
@@ -23,6 +24,7 @@ Framework used: Django (Python Framework) has been used to build this web applic
 
 # Live Project:
 The deployed web application can be found here - https://cs50s90.herokuapp.com/
+
 # Project Description:
 The video description of the project can be found at: https://youtu.be/A8BNNN7_WlU
 
@@ -31,9 +33,11 @@ The video description of the project can be found at: https://youtu.be/A8BNNN7_W
 The whole web application can be used using the command terminal.
 
 # In order to get started:
+
 a. Install python into your computer - https://realpython.com/installing-python/
 b. Install pip - https://www.makeuseof.com/tag/install-pip-for-python/
 c. Install virtualenv - https://docs.python-guide.org/dev/virtualenvs/
+
 You will be requiring a few packages to run this web application on your local server. To make sure the packages doesn't cause problems with
 other programs your computer might run in the future, it is more efficient to install those packages while being inside virtualenv
 d. Make sure you have pip, virtualenv and python in the Path environment variable in your computer - https://superuser.com/questions/143119/how-do-i-add-python-to-the-windows-path
