@@ -35,7 +35,9 @@ The whole web application can be used using the command terminal.
 # In order to get started:
 
 a. Install python into your computer - https://realpython.com/installing-python/ 
+
 b. Install pip - https://www.makeuseof.com/tag/install-pip-for-python/ 
+
 c. Install virtualenv - https://docs.python-guide.org/dev/virtualenvs/
 
 You will be requiring a few packages to run this web application on your local server. To make sure the packages doesn't cause problems with other programs your computer might run in the future, it is more efficient to install those packages while being inside virtualenv.
@@ -53,6 +55,7 @@ e. Run the command (for Windows):   pip install -r requirements.txt
 This ensures that all the packages required to run the web application locally in your server is installed inside a virtual environment
 
 # Setting up and running (while still being in the command terminal):
+
 a. Create a Superuser, which you will need to have admin login to your web application:   python manage.py createsuperuser
 When prompted, insert the username, email and password you want to use to login as admin.  
 b. Run these two commands next to ensure that your Django database has every required models to run the web application:
